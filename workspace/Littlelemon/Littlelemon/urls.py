@@ -23,7 +23,7 @@ router = BookingViewSet.as_view({'get':'list','post':'create'})
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('restaurant/', include('restaurant.urls')),
-    path('restaurant/booking/',router),
+    path('restaurant/booking/',router,name='book'),
     path('auth/',include('djoser.urls')),
     path('auth/',include('djoser.urls.authtoken'))
 ]
